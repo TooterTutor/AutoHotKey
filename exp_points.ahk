@@ -12,7 +12,7 @@ Gui, Add, Tab3, x12 y9 w450 h230 vCurrentTab, Help|Emojis|Symbols
 
 Gui, Tab, Help
 Gui, Font, S10 CDefault,
-Gui, Add, Text, x22 y39 w430 h190, Common Questions about this App:`n`nQ: Some of the symbols in this app show up as thin rectangles when I use the dropdown. How do I fix this?`nA: Some of the symbols have broken icons, meaning that they don't load their correct symbol in the dropdown until you select them. This is a known bug.`n`nQ: Is this app really safe?`nA: Yes, All the scripts and windows executables that TooterTutor has made are in github: https://TooterTutor/AutoHotKey
+Gui, Add, Text, x22 y39 w430 h190, Common Questions about this App:`n`nQ: Some of the symbols in this app show up as thin rectangles when I use the dropdown. How do I fix this?`nA: Some of the symbols have broken icons, meaning that they don't load their correct symbol in the dropdown until you select them. This is a known bug.`n`nQ: Is this app really safe?`nA: Yes, All the scripts and windows executables that TooterTutor has made are in github: https://github.com/TooterTutor/AutoHotKey
 
 Gui, Tab, Emojis
 Gui, Font, S10 CDefault, Segoe UI Symbol
@@ -47,7 +47,7 @@ ButtonCopy:
 Gui, Submit, NoHide
     If (CurrentTab == "Emojis")
     {
-        clipboard := EmojiItem
+        clipboard := emojiItem
         Msgbox, %clipboard%
     }
     Else If (CurrentTab == "Symbols")
