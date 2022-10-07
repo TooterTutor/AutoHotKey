@@ -2,62 +2,68 @@
 #NoEnv
 #SingleInstance Force
 
+; To prevent AutoHotkey from adding spaces before/after these characters,
+; these variables are used below.
+
+; Global chat prefix
 ChatG = /y
+
+; Command prefix
 ChatC = /
 
 
-Gui +AlwaysOnTop
+    Gui +AlwaysOnTop
 
-Gui, Add, Button, x12 y250 w80 h40 gOnQuit, Quit?
-Gui, Add, Text, x280 y275, Application made by TooterTutor
+    Gui, Add, Button, x12 y250 w80 h40 gOnQuit, Quit?
+    Gui, Add, Text, x280 y275, Application made by TooterTutor
 
-Gui, Add, Tab, x12 y9 w430 h230 , Pasteboard|Minecraft
+    Gui, Add, Tab, x12 y9 w430 h230 , Pasteboard|Minecraft
 
-Gui, Tab, PasteBoard
-Gui, Add, Edit, x22 y39 w400 h190, 
+    Gui, Tab, PasteBoard
+    Gui, Add, Edit, x22 y39 w400 h190,
 
 
-Gui, Tab, Minecraft
-Gui, Font, S7 CDefault, Verdana
+    Gui, Tab, Minecraft
+    Gui, Font, S7 CDefault, Verdana
 
-Gui, Add, GroupBox, x22 y39 w180 h170 , Command Keys
-Gui, Add, CheckBox, x32 y59 w90 h20  gHomeChecked vHomeChecked, Enable Home
-Gui, Add, CheckBox, x32 y79 w90 h20  gSpawnChecked vSpawnChecked, Enable Spawn
-Gui, Add, CheckBox, x32 y99 w90 h20  gHubChecked vHubChecked, Enable Hub
+    Gui, Add, GroupBox, x22 y39 w180 h170 , Command Keys
+    Gui, Add, CheckBox, x32 y59 w90 h20  gHomeChecked vHomeChecked, Enable Home
+    Gui, Add, CheckBox, x32 y79 w90 h20  gSpawnChecked vSpawnChecked, Enable Spawn
+    Gui, Add, CheckBox, x32 y99 w90 h20  gHubChecked vHubChecked, Enable Hub
 
-Gui, Add, CheckBox, x32 y139 w90 h20  gCheckChecked vCheckChecked, Enable Check
-Gui, Add, CheckBox, x32 y159 w90 h20  gWarpChecked vWarpChecked, Enable Warp
-Gui, Add, Checkbox, x32 y179 w90 h20 gVanishAChecked vVanishAChecked, Enable Vanish FJ
-Gui, Add, Checkbox, x32 y199 w90 h20 gVanishBChecked vVanishBChecked, Enable Vanish FQ
+    Gui, Add, CheckBox, x32 y139 w90 h20  gCheckChecked vCheckChecked, Enable Check
+    Gui, Add, CheckBox, x32 y159 w90 h20  gWarpChecked vWarpChecked, Enable Warp
+    Gui, Add, Checkbox, x32 y179 w90 h20 gVanishAChecked vVanishAChecked, Enable Vanish FJ
+    Gui, Add, Checkbox, x32 y199 w90 h20 gVanishBChecked vVanishBChecked, Enable Vanish FQ
 
-Gui, Add, Text, x132 y59 w60 h20 +Center, Ctrl + 1
-Gui, Add, Text, x132 y79 w60 h20 +Center, Ctrl + 2
-Gui, Add, Text, x132 y99 w60 h20 +Center, Ctrl + 3
-Gui, Add, Text, x132 y139 w60 h20 +Center, Ctrl + 4
-Gui, Add, Text, x132 y159 w60 h20 +Center, Ctrl + 5
-Gui, Add, Text, x132 y179 w60 h20 +Center, Ctrl + 6
-Gui, Add, Text, x132 y199 w60 h20 +Center, Ctrl + 7
+    Gui, Add, Text, x132 y59 w60 h20 +Center, Ctrl + 1
+    Gui, Add, Text, x132 y79 w60 h20 +Center, Ctrl + 2
+    Gui, Add, Text, x132 y99 w60 h20 +Center, Ctrl + 3
+    Gui, Add, Text, x132 y139 w60 h20 +Center, Ctrl + 4
+    Gui, Add, Text, x132 y159 w60 h20 +Center, Ctrl + 5
+    Gui, Add, Text, x132 y179 w60 h20 +Center, Ctrl + 6
+    Gui, Add, Text, x132 y199 w60 h20 +Center, Ctrl + 7
 
-Gui, Add, GroupBox, x232 y39 w190 h170, Chat
-Gui, Add, CheckBox, x242 y59 w100 h20  gLabel1Checked vLabel1Checked, Welcome Back
-Gui, Add, CheckBox, x242 y79 w100 h20  gLabel2Checked vLabel2Checked, Welcome to CV
-Gui, Add, CheckBox, x242 y99 w100 h20  gLabel3Checked vLabel3Checked, Got to Go
-Gui, Add, CheckBox, x242 y119 w100 h20 gLabel4Checked vLabel4Checked, Be Back in a Bit
+    Gui, Add, GroupBox, x232 y39 w190 h170, Chat
+    Gui, Add, CheckBox, x242 y59 w100 h20  gLabel1Checked vLabel1Checked, Welcome Back
+    Gui, Add, CheckBox, x242 y79 w100 h20  gLabel2Checked vLabel2Checked, Welcome to CV
+    Gui, Add, CheckBox, x242 y99 w100 h20  gLabel3Checked vLabel3Checked, Got to Go
+    Gui, Add, CheckBox, x242 y119 w100 h20 gLabel4Checked vLabel4Checked, Be Back in a Bit
 
-Gui, Add, Text, x352 y59 w60 h20 +Center, Ctrl + 1
-Gui, Add, Text, x352 y79 w60 h20 +Center, Ctrl + 2
-Gui, Add, Text, x352 y99 w60 h20 +Center, Ctrl + 3
-Gui, Add, Text, x352 y119 w60 h20 +Center, Ctrl + 4
+    Gui, Add, Text, x352 y59 w60 h20 +Center, Ctrl + 1
+    Gui, Add, Text, x352 y79 w60 h20 +Center, Ctrl + 2
+    Gui, Add, Text, x352 y99 w60 h20 +Center, Ctrl + 3
+    Gui, Add, Text, x352 y119 w60 h20 +Center, Ctrl + 4
 
-; Generated using SmartGUI Creator 4.0
-Gui, Show, x360 y226 h297 w459, Multipurpose GUI
-Return
+    ; Generated using SmartGUI Creator 4.0
+    Gui, Show, x360 y226 h297 w459, Multipurpose GUI
+    Return
 
-GuiClose:
-ExitApp
+    GuiClose:
+        ExitApp
 
-OnQuit:
-ExitApp
+    OnQuit:
+        ExitApp
 
 
 ; ---------- Commands ----------
@@ -143,8 +149,6 @@ ExitApp
         Sleep, 50
         Send, fq{Enter}
         Return
-
-    
 
 
 ; ---------- Chat ----------

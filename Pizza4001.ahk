@@ -18,20 +18,20 @@
     Gui, Add, Text, x174 y89 w40 h20, (Ctrl + 4)
 
     Gui, Add, Button, x6 y+5 w100 h30 gQuitAll, Quit Application?
-    
+
     Gui, Font, S6, Verdana
 
-    Gui, Add, Text, x200 y130, Application made by TooterTutor for Pizza4001 
+    Gui, Add, Text, x200 y130, Application made by TooterTutor for Pizza4001
 
     ; Generated using SmartGUI Creator 4.0
     Gui, Show, h147 w405, Cubeville Hotkey Window (Pizza4001 Edition!)
     Return
 
     GuiClose:
-    ExitApp
+        ExitApp
 
 
-; ------------ Lables & Variables ------------
+; ------------ Labels & Variables ------------
     QuitAll:
         Gui, Submit
         ExitApp
@@ -68,7 +68,7 @@
         Send, {Space} Got to go
         Send, {Enter}
         Return
-    
+
     Label4:
         Gui, Submit, NoHide
         #If Label4
