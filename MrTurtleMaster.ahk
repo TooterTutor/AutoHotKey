@@ -1,4 +1,0 @@
-﻿#InstallKeybdHook
-#NoEnv
-#SingleInstance Force
-
